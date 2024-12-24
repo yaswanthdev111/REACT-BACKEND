@@ -1,0 +1,79 @@
+// npm init -y
+
+next index.js(server) --> it is the entry point
+
+npm i express cors mongoose jsonwebtoken cookie-parser dotenv bcryptjs
+
+
+
+
+express to create a server
+
+cors to communicate with the different platform
+
+mongoose to connect to the mangodb database 
+
+jsonwebtoken to create a token for the client side 
+
+cookie-parser to parse the cookie
+
+bcryptjs to encrypt the password
+
+dotenv to store the environment variable
+
+
+npm install mangodb
+
+npm install jsonwebtoken
+
+npm run dev
+
+http://localhost:8080/api/register -->  Adding the data
+
+{
+    "name" : "Venky",
+    "email" : "R@gmail.com",
+    "password" : "rakesh123",
+    "profile_pic" : ""
+}
+
+{
+    "message": "User created successfully",
+    "data": {
+        "name": "Venky",
+        "email": "R@gmail.com",
+        "password": "$2a$10$yUu6zS9ZIbCDrZaFjuMbFutAZnFsY7lKboZ67WrQ4fPLAd0R9WDFy",
+        "profile_pic": "",
+        "_id": "67652b0856dc953ac05983ea",
+        "createdAt": "2024-12-20T08:30:00.944Z",
+        "updatedAt": "2024-12-20T08:30:00.944Z",
+        "__v": 0
+    },
+    "success": true
+}
+
+
+http://localhost:8080/api/email -->  hecking email
+
+{
+    "email" : "R@gmail.com"
+}
+
+http://localhost:8080/api/password --> checking password 
+
+{
+    "userId" : "67652b0856dc953ac05983ea",
+    "password" : "rakesh123"
+}
+
+
+http://localhost:8080/api/user-details  --> to see the user details
+
+http://localhost:8080/api/logout --> to logout
+
+http://localhost:8080/api/update-user --> to update the user details
+
+{
+    "name" : "Rakesh konda",
+    "profile_pic" : "" 
+}
