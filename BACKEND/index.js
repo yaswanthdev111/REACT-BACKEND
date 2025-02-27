@@ -17,7 +17,7 @@ const PORT = 3010;
 
 const corsWhitelist = [
   "https://youtube-app-sanju-vert.vercel.app",
-  "https://react-frontend-psi-ashen.vercel.app/",
+  "https://react-frontend-psi-ashen.vercel.app",
   "http://localhost:3000/",
   "https://prototype-verceldeployment-client.vercel.app",
   "https://prototype-verceldeployment-server.vercel.app",
