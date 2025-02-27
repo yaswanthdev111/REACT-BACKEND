@@ -36,7 +36,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// app.use(cookiesParser());
+app.use(cookiesParser());
 
 app.get("/", (request, response) => {
   response.json({
