@@ -7,6 +7,7 @@ const cookiesParser = require('cookie-parser')
 const { app, server } = require('./socket/index')
 
 // const app = express()
+console.log(process.env.FRONTEND_URL)
 app.use(cors({
     origin : process.env.FRONTEND_URL,
     credentials : true
