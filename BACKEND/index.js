@@ -16,23 +16,17 @@ console.log(process.env.FRONTEND_URL);
 const PORT = 3010;
 
 const corsWhitelist = [
-  "https://youtube-app-sanju-vert.vercel.app",
   "https://react-frontend-psi-ashen.vercel.app",
   "http://localhost:3000",
-  "https://prototype-verceldeployment-client.vercel.app",
-  "https://prototype-verceldeployment-server.vercel.app",
-  "https://react-frontend-psi-ashen.vercel.app/password",
-  "https://react-frontend-psi-ashen.vercel.app/email"
+
 ];
 
 const corsOptions = {
-  origin: (origin, callback) => {
-    if (corsWhitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
 };
 
 app.use(cors(corsOptions));
